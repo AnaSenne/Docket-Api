@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org.boot">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body style="background-color:#9082C8;">
+    <div align="center" style=" position: absolute;
+                        background-color:#FFFFFF;
+                        width: 50%;
+                        height: 450px;
+                        left:25%; top:100px;
+                        border-radius: 10px;">
+        <h1 style="color:#6b4ea5;
+                    font-family: Arial;
+                    left: 200px;
+                    top:20px;
+                    text-align: center;
+                    margin-top: 30px;"> Listagem de Cartórios </h1>
+        <table border="1" cellpadding="10">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Rua</th>
+                <th>Bairro</th>
+                <th>Numero</th>
+                <th>Certidão </th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="cartorio : ${cartorios}">
+                <td th:text="${cartorio.id}">ID</td>
+                <td th:text="${cartorio.nome}">Nome</td>
+                <td th:text="${cartorio.rua}">Rua</td>
+                <td th:text="${cartorio.bairro}">Bairro</td>
+                <td th:text="${cartorio.numero}">Numero</td>
+                <td th:text="${cartorio.certidao}">Certidao</td>
+                <td>
+                    <a th:href="'update/' + ${cartorio.id}">Editar</a> <br>
+                    <a th:href="'delete/' + ${cartorio.id}">Deletar</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="insert">Registrar</a>
+    </div>
+
+
+
+</body>
+</html>

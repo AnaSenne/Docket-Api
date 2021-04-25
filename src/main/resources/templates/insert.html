@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org.boot">
+<head>
+    <title> Inserção de Cartório</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body style="background-color:#9082C8;">
+    <div align="center" style=" position: absolute;
+                        background-color:#FFFFFF;
+                        width: 50%;
+                        height: 450px;
+                        left:25%; top:100px;
+                        border-radius: 10px;">
+
+        <h1 style="color:#6b4ea5;
+                    font-family: Arial;
+                    left: 200px;
+                    top:20px;
+                    text-align: center;
+                    margin-top: 30px;"> Cadastro de Cartório </h1>
+
+        <form  action="#" th:action="@{/cartorios}" th:object="${cartorio}" method="POST">
+
+            <div style="margin-top:15px">
+                <label style= " color:#6b4ea5;
+                                    font-family:Arial;
+                                    margin-bottom:15px"> Nome: </label>
+                <input type="text" th:field="*{nome}"/><br>
+            </div>
+
+            <div style="margin-top:15px">
+                <label style= " color:#6b4ea5;
+                                        font-family:Arial;
+                                        margin-top:15px;">Rua:</label>
+                <input type="text" th:field="*{rua}"/><br>
+            </div>
+
+            <div style="margin-top:15px">
+                <label style= " color:#6b4ea5;
+                                        font-family:Arial;
+                                        margin-top:15px;">Bairro:</label>
+                <input type="text" th:field="*{bairro}"/><br>
+            </div>
+
+            <div style="margin-top:15px">
+                <label style= " color:#6b4ea5;
+                                    font-family:Arial;
+                                    margin-top:15px;">Número:</label>
+                <input type="number" th:field="*{numero}"/><br>
+            </div>
+
+            <div style="margin-top:15px">
+                <label style= " color:#6b4ea5;
+                                        font-family:Arial;
+                                        margin-top:20px;">Certidão:</label>
+                <input type="text" th:field="*{certidao}"/><br>
+            </div>
+
+            <button type="submit" style=" margin-top: 15px; margin-left: 15px;"> Registrar </button>
+        </form>
+    </div>
+
+</body>
+</html>

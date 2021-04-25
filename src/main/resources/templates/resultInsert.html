@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org.boot">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartório Inserido</title>
+</head>
+    <body style="background-color:#9082C8;">
+        <div align="center" style=" position: absolute;
+                                background-color:#FFFFFF;
+                                width: 50%;
+                                height: 450px;
+                                left:25%; top:100px;
+                                border-radius: 10px;">
+            <h1 style=" color:#6b4ea5;
+                        font-family: Arial;
+                        left: 200px;
+                        top:20px;
+                        text-align: center;
+                        margin-top: 30px;"> Cartório Cadastrado </h1>
+
+
+            <span style="color:#6b4ea5; font-family: Arial;">Id:</span><span th:text="${cartorio.id}"></span><br>
+            <span style="color:#6b4ea5; font-family: Arial;">Nome:</span><span th:text="${cartorio.nome}"></span><br>
+            <span style="color:#6b4ea5; font-family: Arial;">Rua:</span><span th:text="${cartorio.rua}"></span><br>
+            <span style="color:#6b4ea5; font-family: Arial;">Bairro:</span><span th:text="${cartorio.bairro}"></span><br>
+            <span style="color:#6b4ea5; font-family: Arial;">Número:</span><span th:text="${cartorio.numero}"></span><br>
+            <span style="color:#6b4ea5; font-family: Arial;">Certidão:</span><span th:text="${cartorio.certidao}"></span><br>
+            <a href="/cartorios/"> Página Inicial</a>
+        </div>
+    </body>
+</html>
